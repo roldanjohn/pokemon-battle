@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+*{
+  font-family: 'Roboto Mono','Consolas';
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  background-color: wheat;
+}
+div{
+  display: grid;
+}
+/* Choose a pokemon  */
+#main-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aquamarine; */
+  border: black 5px solid;
+  height: 600px;
+  width: 700px;
+}
+#choose-div{
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 20% 80%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  column-gap: 10px;
+  background-color: white;
+  width: 600px;
+  height: 300px;
+}
+.options{
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+}
+.pokemon-sprite{
+  object-fit: cover;
+  width: fit-content;
+  pointer-events: none;
+}
+#prompt{
+  grid-column: 1/4;
+  text-align: center;
+}
+#choose-charmander{
+  grid-column: 1/2;
+}
+
+
+#rival-div{
+  display: none;
+  background-color: white;
+  height: 500px;
+  width: 600px;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.enemy-pokemon{
+  grid-column: 3/4;
+  justify-items: center;
+}
+.your-pokemon{
+  display: grid;
+  grid-template-rows: 180px 20px 20px ;
+  row-gap: 7px;
+  grid-template-columns: 100%;
+  text-align: center;
+  justify-items: center;
+}
+.dialogue-box{
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.5rem;
+  padding: 30px;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.choice-box{
+  grid-template-rows: repeat(4, 40px);
+  grid-template-columns: 85%;
+  justify-content: center;
+  align-content: space-around;
+  row-gap: 10px;
+  border: solid black 2px;
+}
+.attacks{
+  background: linear-gradient(90deg, #A4E8E0, #4CD7D0);
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 1000ms;
+}
+.attacks:hover{
+  background: linear-gradient(-90deg, #A4E8E0, #4CD7D0);
+}
+.attacks.disable{
+  pointer-events: none;
+  background: rgba(128, 128, 128, 0.5);
+}
+
+#next-battle{
+  display: none;
+}
+
+.progress-bar{
+  width: 150px;
+  border: solid 1px black;
+  border-radius: 30px;
+  height: 10px;
+}
+.progress-value{
+  background-color: red;
+  border-radius: 30px;
+  transition: width 0.5s;
+}
